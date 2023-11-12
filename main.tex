@@ -1,0 +1,65 @@
+\documentclass[12pt, a4paper]{book}
+
+% Bengali language support
+% \usepackage{polyglossia}
+% \setdefaultlanguage{english}
+% \setotherlanguage{bengali}
+% \newfontfamily\bengalifont[Script=Bengali]{SolaimanLipi}
+
+% Additional packages
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+% Page layout
+\geometry{margin=1in}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.5}
+
+% Title and author
+\title{আপনার শিরোনাম}
+\author{আপনার নাম}
+
+% Chapter formatting
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter}{12pt}{\large}
+
+% Hyperlink settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\begin{document}
+
+\frontmatter
+
+% Title page
+\maketitle
+
+% Table of contents
+\tableofcontents
+
+\mainmatter
+
+% Your chapters go here
+\input{chapters/introduction.tex}
+% ... add more chapters as needed ...
+
+\backmatter
+
+% Bengali language for bibliography
+% \begin{otherlanguage}{bengali}
+%   % Bibliography
+%   \bibliographystyle{plain}
+%   \bibliography{bibliography} % Replace with your .bib file
+% \end{otherlanguage}
+ 
+
+\end{document}
+  
