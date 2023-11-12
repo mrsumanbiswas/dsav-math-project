@@ -1,0 +1,22 @@
+{
+    // "latex-workshop.latex.recipes": [
+    //     {
+    //         "name": "pdflatex",
+    //         "tools": [
+    //             "pdflatex"
+    //         ]
+    //     }
+    // ],
+    // "latex-workshop.latex.tools": [
+    //     {
+    //         "name": "pdflatex",
+    //         "command": "pdflatex",
+    //         "args": [
+    //             "-output-directory=build",
+    //             "%DOC%"
+    //         ],
+    //         "env": {}
+    //     }
+    // ],
+    "latex-workshop.latex.outDir": "./build",
+}
