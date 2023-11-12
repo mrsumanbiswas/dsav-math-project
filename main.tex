@@ -1,10 +1,15 @@
 \documentclass[12pt, a4paper]{book}
 
 % Bengali language support
-% \usepackage{polyglossia}
-% \setdefaultlanguage{english}
-% \setotherlanguage{bengali}
-% \newfontfamily\bengalifont[Script=Bengali]{SolaimanLipi}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+
+% Set the main language to Bengali
+\setmainlanguage{bengali}
+\setotherlanguage{english}
+
+% Choose a Bengali font installed on your system
+\newfontfamily\bengalifont[Script=Bengali]{Kalpurush}
 
 % Additional packages
 \usepackage{amsmath, amssymb, amsthm}
@@ -25,13 +30,13 @@
 
 % Chapter formatting
 \titleformat{\chapter}[display]
-  {\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter}{12pt}{\large}
+    {\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter}{12pt}{\large}
 
 % Hyperlink settings
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 
@@ -48,18 +53,16 @@
 \mainmatter
 
 % Your chapters go here
-\input{chapters/introduction.tex}
-% ... add more chapters as needed ...
+\input{chapters/introduction}
+% and more ...
 
 \backmatter
 
 % Bengali language for bibliography
-% \begin{otherlanguage}{bengali}
-%   % Bibliography
-%   \bibliographystyle{plain}
-%   \bibliography{bibliography} % Replace with your .bib file
-% \end{otherlanguage}
- 
+\begin{otherlanguage}{bengali}
+% Bibliography
+\bibliographystyle{plain}
+\bibliography{bibliography} % Replace with your .bib file
+\end{otherlanguage}
 
 \end{document}
-  
