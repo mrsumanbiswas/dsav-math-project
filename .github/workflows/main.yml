@@ -18,8 +18,10 @@ jobs:
         sudo apt-get update -q
         sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra
 
-    - name: Download Kalpurush font
-      run: wget -O assets/Kalpurush.ttf  https://github.com/mrsumanbiswas/dsav-math-project/assets/Kalpurush.ttf
+  - name: Download Kalpurush font
+    run: |
+      mkdir -p ./assets
+      wget -O ./assets/Kalpurush.ttf https://raw.githubusercontent.com/mrsumanbiswas/dsav-math-project/main/assets/Kalpurush.ttf
 
 
     - name: Compile LaTeX to HTML
