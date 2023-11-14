@@ -19,16 +19,23 @@
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{caption}
 
 % Some Global Variables
-\definecolor{page_bg}{HTML}{EFFFFB} 
+\definecolor{page_bg}{HTML}{EFFFFB}
+\definecolor{primary}{HTML}{4F98CA}
+\definecolor{secondary}{HTML}{50D890}
+\definecolor{dark}{HTML}{272727}
+
 
 % Page layout
 \geometry{margin=1in}
 \setlength{\parskip}{1em}
 \renewcommand{\baselinestretch}{1.5}
+\color{dark}
 \pagecolor{page_bg}
-
+\pgfplotsset{compat=1.17}
 
 % Title and author
 \title{ গণিত প্রকল্প }
@@ -42,10 +49,21 @@
 % Hyperlink settings
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=primary,
     filecolor=magenta,
-    urlcolor=cyan,
+    urlcolor=secondary,
 }
+
+% Graphs
+\tikzset{
+  default/.style={
+    color=primary, % Set your default color here
+    thick,
+    fill=secondary!30,
+    % Add other default styles as needed
+  }
+}
+
 
 \begin{document}
 
