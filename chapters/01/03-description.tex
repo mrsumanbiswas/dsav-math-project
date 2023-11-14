@@ -1,3 +1,289 @@
+\subsection{ ক্ষেত্রফলের মান নির্ণয়ের পদ্ধতি }
+
+
+# নির্দিষ্ট সমকালের সাহায্যে ক্ষেত্রফলের নির্ণয়ের জন্য নিচের ধাপ গুলি অনুসরণ করতে হবে। 
+
+\begin{enumerate}
+    \item প্রথমে প্রদত্ত আপেক্ষিক কে একটি খসড়া লেখচিত্র অঙ্কন করতে হবে।
+    \item তারপর অফিস অভীষ্ট অঞ্চলটি চিত্রে নির্দেশিত করতে হবে।
+    \item অবশেষে একটি নির্দিষ্ট সমাকলন গঠন করতে হবে এবং সমকালীন সীমা দুটি এরূপভাবে নির্বাচন করতে হবে যাতে স্বাধীন চলটি সমগ্র অঞ্চলে পরিবর্তিত হতে পারে ও সমকলটির মান নির্ণয় করতে হবে।
+
+\end{enumerate}
+
+
+
+\subsection{ $x = a,\: x = b,\: x$-অক্ষ এবং $y = f(x)$ বক্ররেখা দ্বারা সীমাবদ্ধ ক্ষেত্রে ক্ষেত্রফল}
+
+\begin{minipage}{0.45\textwidth}
+    \textbf{ক্ষেত্র-1:} যখন $f(x) > 0$ in $[a, b]$ :
+    এক্ষেত্রে নির্ণয়ের ক্ষেত্রফল $= \int_{a}^{b} f(x)dx$
+
+    
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            domain=2:4,
+            samples=100,
+            axis lines=middle,
+            xlabel=$x$,
+            ylabel=$y$,
+            grid=major,
+            height=6cm,
+            width=8cm,
+            ymin=0,
+            ]
+            \addplot [default, default ] {x} \closedcycle;
+            \addlegendentry{$\int_{a}^{b} x \, dx$}
+        \end{axis}
+    \end{tikzpicture}
+    \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
+    \label{fig:integral-graph}
+
+    
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+
+    \textbf{ক্ষেত্র-2:} যখন $f(x) < 0$ in $[a,b]$ :
+    এক্ষেত্রে নির্ণয়ের ক্ষেত্রফল $= \int_{a}^{b} (-f(x)) dx$
+
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            domain=0:2,
+            samples=100,
+            axis lines=middle,
+            xlabel=$x$,
+            ylabel=$y$,
+            grid=major,
+            height=6cm,
+            width=8cm,
+            ]
+            \addplot [blue, thick, fill=blue!30] {x} \closedcycle;
+            \addlegendentry{$\int_{0}^{2} x \, dx$}
+        \end{axis}
+    \end{tikzpicture}
+    \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
+    \label{fig:integral-graph2}
+\end{minipage}
+
+\newpage
+
+\subsection{ $y = c,\: y = d,\: y$-অক্ষ এবং $x = f(y)$ বক্ররেখা দ্বারা সীমাবদ্ধ ক্ষেত্রে ক্ষেত্রফল}
+\begin{minipage}{0.45\textwidth}
+    
+    \textbf{ক্ষেত্র-1:} যখন $f(y) > 0$ in $[c, d]$ :
+    এক্ষেত্রে নির্ণয়ের ক্ষেত্রফল $= \int_{c}^{d} f(y)dy$
+
+    
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            domain=2:4,
+            samples=100,
+            axis lines=middle,
+            xlabel=$x$,
+            ylabel=$y$,
+            grid=major,
+            height=6cm,
+            width=8cm,
+            ymin=0,
+            xmin = 0,
+            xmax=3,
+            ]
+            \addplot [blue, thick, fill=blue!30] {x} \closedcycle;
+            \addlegendentry{$\int_{a}^{b} x \, dx$}
+        \end{axis}
+    \end{tikzpicture}
+    \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
+    \label{fig:integral-grapx}
+
+    
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+
+    \textbf{ক্ষেত্র-2:} যখন $f(y) < 0$ in $[c,d]$ :
+    এক্ষেত্রে নির্ণয়ের ক্ষেত্রফল $= \int_{c}^{d} (-f(y)) dx$
+
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            domain=0:2,
+            samples=100,
+            axis lines=middle,
+            xlabel=$x$,
+            ylabel=$y$,
+            grid=major,
+            height=6cm,
+            width=8cm,
+            ]
+            \addplot [blue, thick, fill=blue!30] {x} \closedcycle;
+            \addlegendentry{$\int_{0}^{2} x \, dx$}
+        \end{axis}
+    \end{tikzpicture}
+    \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
+    \label{fig:integral-grapd2}
+\end{minipage}
+
+\subsection{ $y = f_1(x),\: y = f_2(x),\:x=a$ এবং $x=b$ দ্বারা সীমাবদ্ধ ক্ষেত্রে ক্ষেত্রফল}
+
+    \begin{minipage}{0.45\textwidth}
+        চিত্র \ref{fig:intsegral-grapx}-এর ক্ষেত্রে
+
+        নির্নিও খেত্রফল $=$ ABPQ ক্ষেত্রের ক্ষেত্রফল $=$ MNPQ ক্ষেত্রের ক্ষেত্রফল $-$ MNBA ক্ষেত্রের ক্ষেত্রফল
+
+        $=\int_{a}^{b}f_1(x)dx - \int_{a}^{b}[f_1(x) - f_2(x)]dx = \int_{a}^{b} (y$ of upper curve $- y$ of lower curve$)dx$ 
+
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                domain=2:4,
+                samples=100,
+                axis lines=middle,
+                xlabel=$x$,
+                ylabel=$y$,
+                grid=major,
+                height=6cm,
+                width=8cm,
+                ymin=0,
+                ]
+                \addplot [blue, thick, fill=blue!30] {x} \closedcycle;
+                \addlegendentry{$\int_{a}^{b} x \, dx$}
+            \end{axis}
+        \end{tikzpicture}
+        \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
+        \label{fig:intsegral-grapx}
+
+        
+
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        
+        চিত্র \ref{fig:intsegral-grapx}-এর ক্ষেত্রে
+
+        নির্নিও খেত্রফল $=$ ABPQ ক্ষেত্রের ক্ষেত্রফল $=$ MNPQ ক্ষেত্রের ক্ষেত্রফল $+$ MNBA ক্ষেত্রের ক্ষেত্রফল
+
+        $=\int_{a}^{b}f_1(x)dx - \int_{a}^{b}(- f_2(x))dx$ $[\because f_2(x) < 0 ] = \int_{a}^{b}[f_1(x) - f_2(x)]dx$\\
+        $= \int_{a}^{b} (y$ of upper curve $- y$ of lower curve$)dx$ 
+
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                domain=0:2,
+                samples=100,
+                axis lines=middle,
+                xlabel=$x$,
+                ylabel=$y$,
+                grid=major,
+                height=6cm,
+                width=8cm,
+                ]
+                \addplot [blue, thick, fill=blue!30] {x} \closedcycle;
+                \addlegendentry{$\int_{0}^{2} x \, dx$}
+            \end{axis}
+        \end{tikzpicture}
+        \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
+        \label{fig:sintegral-grapd2}
+    \end{minipage}
+
+\subsection{ $x=f_1(y),\: x = f_2(y),\: y = c$ এবং $y = d$ দ্বারা সীমাবদ্ধ ক্ষেত্রে ক্ষেত্রফল}
+
+\begin{minipage}{0.45\textwidth}
+    
+    পূর্বের ন্যায় এক্ষেত্রেও [\ref{fig:integral-grapd2} নং চিত্রের ক্ষেত্রে]
+
+    নির্ণয় ক্ষেত্রফল $= \int_{c}^{d}f_1(y)dy - \int_{c}^{d}f_2(y)dy = \int_{c}^{d}[f_1(y) - f_2(y)]dy$
+    $= \int_{c}^{d}[x$ of upper curve $-x$ of lower curve$]dy$
+
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            domain=2:4,
+            samples=100,
+            axis lines=middle,
+            xlabel=$x$,
+            ylabel=$y$,
+            grid=major,
+            height=6cm,
+            width=8cm,
+            ymin=0,
+            ]
+            \addplot [blue, thick, fill=blue!30] {x} \closedcycle;
+            \addlegendentry{$\int_{a}^{b} x \, dx$}
+        \end{axis}
+    \end{tikzpicture}
+    \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
+    \label{fig:intsegral-grapx}
+
+    
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+
+    পূর্বের ন্যায় এক্ষেত্রেও [\ref{fig:integral-grapd2} নং চিত্রের ক্ষেত্রে]
+
+    নির্ণয় ক্ষেত্রফল $= \int_{c}^{d}f_1(y)dy + \int_{c}^{d}(-f_2(y))dy = \int_{c}^{d}[f_1(y) - f_2(y)]dy$
+    $= \int_{c}^{d}[x$ of upper curve $-x$ of lower curve$]dy$
+
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            domain=0:2,
+            samples=100,
+            axis lines=middle,
+            xlabel=$x$,
+            ylabel=$y$,
+            grid=major,
+            height=6cm,
+            width=8cm,
+            ]
+            \addplot [blue, thick, fill=blue!30] {x} \closedcycle;
+            \addlegendentry{$\int_{0}^{2} x \, dx$}
+        \end{axis}
+    \end{tikzpicture}
+    \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
+    \label{fig:sintegral-grapd2}
+\end{minipage}
+
+\section{দুটি বক্ররেখার দ্বারা সীমাবদ্ধ ক্ষেত্রে ক্ষেত্রফল}
+    চিত্র \ref{fig:integral-grapd2}-এর ক্ষেত্রে, $y = f_1(x)$ এবং $y = f_2(x)$ 
+    বক্ররেখা দুটি পরস্পরকে $A$ এবং $B$ বিন্দুতে ছেদ করছে এবং ছেদবিন্দু দুটি ভুজ যথাক্রমে $a$ এবং $b$।
+    এখন $x = a$ এবং $x = b$ সমান্তরাল রেখাদুটির মধ্যে সমস্ত আচ্ছাদিত অঞ্চলটি আছে।
+
+    এরকম ক্ষেত্রে নির্ণয় ক্ষেত্রফল\\ $= \int_{a}^{b}[f_1(x) -f f_2(x)]dx = \int_{a}^{b}[y$ of upper curve $- y$ of lower curve$]dx$
+
+    আবার যদি সমস্ত আচ্ছাদিত অঞ্চলটি $y = c$ এবং $y = d$ সমান্তরাল লেখা দুটির মধ্যে থাকে তবে নির্ণেয় ক্ষেত্রফলটিকে
+    $\int_{c}^{d}[x$ of upper curve $- x$ of lower curve$]dy$-এর দাড়াও নির্ণয় করা যেতে পারে।
+
+    \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        domain=0:2,
+        samples=100,
+        axis lines=middle,
+        xlabel=$x$,
+        ylabel=$y$,
+        grid=major,
+        height=8cm,
+        width=12cm,
+        ]
+        \addplot [blue, thick, fill=blue!30] {x} \closedcycle;
+        \addlegendentry{$\int_{0}^{2} x \, dx$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Graph of $\int_{0}^{2} x \, dx$}
+    \label{fig:integralsdfssd-graph}
+    \end{figure}
+
+\newpage
+\section{title}
 
 
 \newpage
+
