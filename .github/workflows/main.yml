@@ -23,14 +23,17 @@ jobs:
         mkdir -p ~/.fonts
         wget -O ~/.fonts/Kalpurush.ttf https://raw.githubusercontent.com/mrsumanbiswas/dsav-math-project/main/assets/Kalpurush.ttf
         fc-cache -f -v
-        
-    - name: Compile LaTeX to HTML
-      run: |
-        xelatex -shell-escape -interaction=nonstopmode -halt-on-error main.tex
-        htlatex main.tex "xhtml, charset=utf-8" " -cunihtf -utf8"
-        mkdir -p docs
-        mv *.html *.css docs/
-        mv img docs/
+
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: main.tex
+    # - name: Compile LaTeX to HTML
+      # run: |
+      #  `
+      #   mkdir -p docs
+      #   mv *.html *.css docs/
+      #   mv img docs/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@main
