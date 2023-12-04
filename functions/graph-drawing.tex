@@ -1,0 +1,74 @@
+% graph-drawing.tex
+
+\usepackage{tikz}
+\usepackage{caption}
+
+% Function to draw integral graph
+\newcommand{\drawIntegralGraph}[6]{
+  \begin{minipage}{0.45\textwidth}
+    \textbf{#1:} When $#2 > 0$ in $[#3, #4]$:
+    In this case, the area under the curve is given by
+    \[
+      \text{Area} = \int_{#3}^{#4} #5 \,dx
+    \]
+
+    \centering
+    \begin{tikzpicture}
+      % Define the function
+      \def\f(#6){#5}
+      
+      % Draw the axes
+      \draw[->] (-1,0) -- (5,0) node[right] {$x$};
+      \draw[->] (0,-1) -- (0,3) node[above] {$f(x)$};
+      
+      % Draw the function curve
+      \draw[domain=#3:#4,smooth,variable=\x,blue] plot ({\x},{\f(\x)});
+      
+      % Fill the area under the curve
+      \fill[gray!30,domain=#3:#4,variable=\x] (#3,0) -- plot ({\x},{\f(\x)}) -- (#4,0) -- cycle;
+      
+      % Mark the integral limits
+      \draw[dashed] (#3,0) node[below] {$#3$} -- (#3,{\f(#3)});
+      \draw[dashed] (#4,0) node[below] {$#4$} -- (#4,{\f(#4)});
+      
+      % Label the integral
+      \node[above right] at ({(#3+#4)/2},{\f((#3+#4)/2)}) {$\int_{#3}^{#4} #5 \,dx$};
+    \end{tikzpicture}
+    \captionof{figure}{Graph of $\int_{#3}^{#4} #5 \, dx$}
+    \label{fig:integral-graph-#4}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \textbf{#1:} When $#2 < 0$ in $[#3, #4]$:
+    In this case, the area under the curve is given by
+    \[
+      \text{Area} = \int_{#3}^{#4} (-#5) \,dx
+    \]
+
+    \centering
+    \begin{tikzpicture}
+      % Define the function
+      \def\f(#6){-#5}
+      
+      % Draw the axes
+      \draw[->] (-1,0) -- (5,0) node[right] {$x$};
+      \draw[->] (0,-3) -- (0,1) node[above] {$f(x)$};
+      
+      % Draw the function curve
+      \draw[domain=#3:#4,smooth,variable=\x,red] plot ({\x},{\f(\x)});
+      
+      % Fill the area under the curve
+      \fill[gray!30,domain=#3:#4,variable=\x] (#3,0) -- plot ({\x},{\f(\x)}) -- (#4,0) -- cycle;
+      
+      % Mark the integral limits
+      \draw[dashed] (#3,0) node[below] {$#3$} -- (#3,{\f(#3)});
+      \draw[dashed] (#4,0) node[below] {$#4$} -- (#4,{\f(#4)});
+      
+      % Label the integral
+      \node[below right] at ({(#3+#4)/2},{\f((#3+#4)/2)}) {$\int_{#3}^{#4} (-#5) \,dx$};
+    \end{tikzpicture}
+    \captionof{figure}{Graph of $\int_{#3}^{#4} #5 \, dx$}
+    \label{fig:integral-graph2-#4}
+  \end{minipage}
+  \newpage
+}
