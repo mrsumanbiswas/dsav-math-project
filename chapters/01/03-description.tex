@@ -20,22 +20,21 @@
 
     
     \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            domain=2:4,
-            samples=100,
-            axis lines=middle,
-            xlabel=$x$,
-            ylabel=$y$,
-            grid=major,
-            height=6cm,
-            width=8cm,
-            ymin=0,
-            ]
-            \addplot [default, default ] {x} \closedcycle;
-            \addlegendentry{$\int_{a}^{b} x \, dx$}
-        \end{axis}
+    \begin{tikzpicture}[scale=1.5]
+        %axis
+        \draw[->] (-1,0) -- (4,0) node[right]{$x$};
+        \draw[->] (0,-1) -- (0,3) node[above]{$y$};
+
+        %function
+        \draw[domain=0.5:3.5,smooth,variable=\x,thick] plot ({\x},{0.5*sin(\x r)+1.5});
+        
+        % Filling the area
+        \fill[gray!30, domain=0.5:3.5, variable=\x]
+        (0.5,0) -- plot ({\x},{0.5*sin(\x r)+1.5}) -- (3.5,0) -- cycle;
+
+        
     \end{tikzpicture}
+
     \captionof{figure}{Graph of $\int_{0}^{2} x \, dx$}
     \label{fig:integral-graph}
 
