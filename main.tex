@@ -2,32 +2,49 @@
 \documentclass[12pt, a4paper]{book}
 
 % Include the font setup
-\usepackage{font-setup}
+\usepackage{styles/font-setup}
 
 % Include the color setup
-\usepackage{color-setup}
+\usepackage{styles/color-setup}
 
 % Include the layout setup
-\usepackage{layout-setup}
+\usepackage{styles/layout-setup}
 
 % Include the hyperlinks setup
-\usepackage{hyperlinks-setup}
+\usepackage{styles/hyperlinks-setup}
 
 % Include the chapter setup
-\usepackage{chapters-setup}
+\usepackage{styles/chapters-setup}
 
 % Include the standards setup
-\usepackage{standards-setup}
+\usepackage{styles/standards-setup}
 
 % Include the theme setup
-\usepackage{theme-setup}
+\usepackage{styles/theme-setup}
 
 % Include graph-drawing setup
-\usepackage{graph-drawing}
+\usepackage{functions/integral-graph-drawing}
 
 \begin{document}
 
 \frontmatter
-% ... (rest of your document)
+
+% Title page
+\maketitle
+
+% Table of contents
+% \tableofcontents
+
+\mainmatter
+
+% \drawIntegralGraph{ক্ষেত্র-1}{f(x)}{a}{b}{x}{x^2}
+
+    % \begin{graphEnvironment}{ক্ষেত্র-1}{$x^2$}{a}{b}{x}
+    % % Additional formatting or actions before drawing the grapho
+    %     hi
+    % \end{graphEnvironment}
+    \begin{drawIntegrals}{Hi}{sdfs}{3}{4}{sdf}{33}{2}
+        s
+    \end{drawIntegrals}
 
 \end{document}

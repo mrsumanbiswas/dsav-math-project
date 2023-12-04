@@ -1,0 +1,22 @@
+% integral-graph-drawing
+
+\usepackage{tikz,caption}
+
+% Environment to draw integral Graph
+\newenvironment{drawIntegrals}[7]{%
+    % Before
+    \subsection{#1}%
+}{%
+    % After
+    \begin{minipage}{0.45\textwidth}
+        #4  #2  #3
+    \end{minipage}
+    
+    \hfil
+
+    \begin{minipage}{0.45\textwidth}
+        #7  #5  #6
+    \end{minipage}
+}
+
+
