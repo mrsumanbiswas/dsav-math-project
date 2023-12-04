@@ -1,0 +1,21 @@
+% color-setup.sty
+
+% Additional packages
+\usepackage{xcolor}
+\usepackage{pgfplots}
+
+% Define colors
+\definecolor{page_bg}{HTML}{EFFFFB}
+\definecolor{primary}{HTML}{4F98CA}
+\definecolor{secondary}{HTML}{50D890}
+\definecolor{dark}{HTML}{272727}
+
+% Graphs
+\tikzset{
+  default/.style={
+    color=primary, % Set your default color here
+    thick,
+    fill=secondary!30,
+    % Add other default styles as needed
+  }
+}
